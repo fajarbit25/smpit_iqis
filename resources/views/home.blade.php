@@ -27,7 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 </head>
@@ -38,8 +38,8 @@
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:smpit@iqis.sch.id">smpit@iqis.sch.id</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>0823-900-900-10</span></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:smpit@iqis.sch.id">{{$data['sekolah']['email_campus']}}</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>{{$data['sekolah']['campus_contact']}}</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -78,6 +78,16 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row">
+        <div class="col-sm-6 col-12 my-5">
+          <img src="{{asset('/storage/home/logo-smpit.png')}}" alt="Logo" style="max-width: 60%;">
+        <div class="col-sm-12">
+          <h1>Selamat Datang</h1>
+          <h2>SMPIT - Ibnul Qayyim Islamic School</h2>
+          <p>Sekolah Tahfidz dan Bahasa Asing</p>
+        </div>
+      </div>
+      
     </div>
   </section><!-- End Hero -->
 
@@ -162,7 +172,7 @@
           <div class="col-lg-4 col-md-4">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$data['siswa']}}" data-purecounter-duration="2" class="purecounter" id="count-siswa"></span>
               <p>Siswa</p>
             </div>
           </div>
@@ -170,7 +180,7 @@
           <div class="col-lg-4 col-md-4 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-mortarboard-fill"></i>
-              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$data['guru']}}" data-purecounter-duration="2" class="purecounter" id="count-guru"></span>
               <p>Guru</p>
             </div>
           </div>
@@ -178,7 +188,7 @@
           <div class="col-lg-4 col-md-4 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-house"></i>
-              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{$data['kelas']}}" data-purecounter-duration="2" class="purecounter" id="count-sekolah"></span>
               <p>Kelas</p>
             </div>
           </div>
@@ -271,8 +281,8 @@
         <div class="col-xl-12">
           <div class="row">
 
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Bimbingan Dasar Islam</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -282,8 +292,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Bimbingan Ibadah</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -292,8 +302,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Tahfizh Matan Ilmiyyah</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -302,8 +312,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Talaqqi Tahsinul Qira'ah</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -312,8 +322,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Tahfizh Al-Qur'an</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -323,8 +333,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-mortarboard-fill"></i> Bahasa Arab dan Inggris</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -333,8 +343,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-moon-stars-fill"></i> Tahfih Hadits</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -343,8 +353,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-mortarboard-fill"></i> English Day</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -353,8 +363,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 mb-3">
-              <div class="card" style="width: 18rem;">
+            <div class="col-12 col-lg-3 mb-3">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title"><i class="bi bi-mortarboard-fill"></i> Basic Computer Skills</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -433,7 +443,7 @@
               <i class="bx bx-map"></i>
               <h3>Our Address</h3>
               <p>
-                Jl. Taman Bunga Sudiang Kel No.2, Laikang, Biringkanaya, Makassar, Sulawesi Selatan
+                {{$data['sekolah']['campus_alamat']}}
               </p>
             </div>
           </div>
@@ -442,7 +452,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>smpit@iqis.sch.id</p>
+              <p> {{$data['sekolah']['email_campus']}}</p>
             </div>
           </div>
 
@@ -450,7 +460,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>0823-900-900-10</p>
+              <p> {{$data['sekolah']['campus_contact']}}</p>
             </div>
           </div>
 
@@ -497,6 +507,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js?v.1.2"></script>
 
 </body>
 
