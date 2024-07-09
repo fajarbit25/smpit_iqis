@@ -199,15 +199,15 @@
 
         <div class="row">
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Kurikulum</a></h4>
+              <h4 style="width: 100%;"><a href="">Kurikulum</a></h4>
               <p>Kurikulum Pendidikan Terbaru</p>
             </div>
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-file"></i></div>
               <h4><a href="">Full AC</a></h4>
               <p>Ruang Kelas Modern dan Full-AC</p>
@@ -215,7 +215,7 @@
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4><a href="">Laboratorium</a></h4>
               <p>Laboratorium IPA, Komputer, dan Multimedia</p>
@@ -223,7 +223,7 @@
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-world"></i></div>
               <h4><a href="">Kantin</a></h4>
               <p>Kantin Sehat (Produk dikontrol oleh sekolah)</p>
@@ -231,7 +231,7 @@
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-slideshow"></i></div>
               <h4><a href="">Perpustakaan</a></h4>
               <p>Perpustakaan Terpadu</p>
@@ -239,7 +239,7 @@
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-arch"></i></div>
               <h4><a href="">Lingkungan</a></h4>
               <p>Lingkungan Bersih, Aman, Dan Nyaman</p>
@@ -247,7 +247,7 @@
           </div>
 
           <div class="col-12 col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box col-sm-12">
+            <div class="icon-box col-12">
               <div class="icon"><i class="bx bx-arch"></i></div>
               <h4><a href="">Add On</a></h4>
               <p>Mobil Jemputan dan Catering Makan Siang (By Request)</p>
